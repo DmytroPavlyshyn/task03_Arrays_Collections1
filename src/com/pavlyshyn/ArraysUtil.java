@@ -1,18 +1,16 @@
 package com.pavlyshyn;
 
-import java.util.ArrayList;
 import java.util.Arrays;
 
 public class ArraysUtil {
     public static void main(String[] args) {
-      // System.out.println(Arrays.toString(intersect(new int[]{1,2,3,4,5},new int[]{4,5,6,7})));
-        //System.out.println(Arrays.toString(copyOfRange(new int[]{0,1,2,3,4,5,6},0,5)));
-        //System.out.println(Arrays.toString(union(new int[]{1,2,3,4,5},new int[]{4,5,6,7})));
-        //System.out.println(Arrays.toString(except(new int[]{1,2,3,4,5,8},new int[]{4,5,6,7})));
+        System.out.println(Arrays.toString(intersect(new int[]{1,2,3,4,5},new int[]{4,5,6,7})));
+        System.out.println(Arrays.toString(copyOfRange(new int[]{0,1,2,3,4,5,6},0,5)));
+        System.out.println(Arrays.toString(union(new int[]{1,2,3,4,5},new int[]{4,5,6,7})));
+        System.out.println(Arrays.toString(except(new int[]{1,2,3,4,5,8},new int[]{4,5,6,7})));
         int[] a = new int[]{1,1,1,2,3,4,5,5,5};
-        //System.out.println(Arrays.toString(a));
-        System.out.println(Arrays.toString(removeEquel(a)));
-        //System.out.println(Arrays.toString(remove(a,8)));
+        System.out.println(Arrays.toString(a));
+        System.out.println(Arrays.toString(removeEqualSequence(a)));
     }
 
     public static int[] intersect(int[] a, int[] b){
@@ -63,7 +61,8 @@ public class ArraysUtil {
         }
         return copyOfRange(result,0,index);
     }
-    public static int[] removeEquel(int [] a){
+
+    public static int[] removeEqualSequence(int [] a){
         int[] result = copyOfRange(a,0,a.length);
         int capacity = a.length;
         for(int i = 0; i< capacity; i++){
@@ -117,19 +116,5 @@ public class ArraysUtil {
         }
         return result;
     }
-//    public static int[] remove(int[] a, int el){
-//        int[] result = copyOfRange(a,0,a.length);
-//        int minCapacity = result.length;
-//        for(int i = 0; i< minCapacity; i++){
-//            if(result[i] == el){
-//                for(int j = i; j < minCapacity-1; j++){
-//                    result[j] = result[j+1];
-//                }
-//                i--;
-//                minCapacity--;
-//            }
-//
-//        }
-//        return copyOfRange(result,0,minCapacity);
-//    }
+
 }

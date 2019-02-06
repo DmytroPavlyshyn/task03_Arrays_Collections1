@@ -87,7 +87,6 @@ public class PriorityQueue <E>  {
         PriorityQueue<Integer> integerPriorityQueue = new PriorityQueue<>(Integer::compareTo);
         integerPriorityQueue.offer(12);
         integerPriorityQueue.offer(54);
-
         integerPriorityQueue.offer(11);
         integerPriorityQueue.offer(12);
         integerPriorityQueue.offer(33);

@@ -3,7 +3,7 @@ package com.pavlyshyn.game;
 import java.util.Random;
 
 public class DoorGenerator {
-    private Random random = new Random(47);
+    private Random random = new Random();
     DoorValue next(){
 
         if(random.nextBoolean()){
